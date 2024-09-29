@@ -1,15 +1,78 @@
 * {
     padding: 0;
     margin: 0;
+    font-family:'Franklin Gothic Medium';
 }
 
 body {
     overflow: hidden;
     width: 100vw;
     height: 100vh;
+    background-color: black;
 }
 
 #main {
     width: 100%;
     height: 100%;
+}
+
+#chords {
+    /* overflow-x: scroll;
+    overflow: hidden;
+    overflow-y: hidden; */
+    width: 100%;
+    height: 75%;
+    display: grid;
+    grid-template-columns: repeat(16, 15%);
+    grid-template-rows: 100%;
+}
+
+/* #chords::-webkit-scrollbar {
+    background-color: white; 
+    
+} */
+
+/* #chords::-webkit-scrollbar-thumb {
+    background-color: black;
+    border: 1px solid white;
+} */
+
+.chord {
+    width: 100%;
+    height: 100%;
+    grid-row: 1;
+    border: 1px solid white;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: repeat(24, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.noteName {
+    color: white;
+    grid-column: 1;
+    font-size: 0.75vw;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid white;
+}
+
+.noteName span {
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+}
+
+.note {
+    grid-column: 2;
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
+}
+
+.on {
+    background-color: white;
 }
